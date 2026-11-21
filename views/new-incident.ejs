@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<h1>Report New Incident</h1>
+
+<form action="/incidents" method="POST" class="mt-4">
+  <div class="mb-3">
+    <label for="title" class="form-label">Incident Title</label>
+    <input type="text" class="form-control" id="title" name="title" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="severity" class="form-label">Severity</label>
+    <select class="form-select" id="severity" name="severity" required>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+      <option value="Critical">Critical</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-danger">
+    <i class="fa-solid fa-paper-plane"></i> Submit Incident
+  </button>
+  <a href="/" class="btn btn-secondary">Cancel</a>
+</form>
+
+<%- include('partials/footer') %>
